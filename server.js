@@ -6,9 +6,9 @@ const logger = require('./logger');
 
 const port = process.env.PORT || 8080;
 // const portSSL = process.env.PORT || process.env.PORTSSL;
-const color = process.env.SCOLOR;
+const color = process.env.SCOLOR || "red";
 // const iipSSL = (process.env.INTERFACEIPSSL)?process.env.INTERFACEIPSSL:'0.0.0.0';
-const iip = (process.env.INTERFACEIP) ? process.env.INTERFACEIP : '0.0.0.0';
+const iip = process.env.INTERFACEIP || '0.0.0.0';
 
 // Object which will be printed on server response
 let details = {
