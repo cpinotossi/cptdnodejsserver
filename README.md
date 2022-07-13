@@ -12,7 +12,7 @@ Install and run.
 ~~~ bash
 npm install
 npm run start
-curl -v http://localhost:8080
+curl -v http://localhost:3000
 curl -v -k https://localhost:4040
 ~~~
 
@@ -25,7 +25,6 @@ TODO
 ~~~ bash
 curl -v -k --tlsv1.2 --cert openssl/alice.crt --key openssl/alice.key https://127.0.0.1:4040/
 echo quit | openssl s_client -showcerts -connect 127.0.0.1:4040 # get more details about the cert.
-openssl s_client -tls1_2 -connect 10.217.0.202:2003 -showcerts # show certificate
 ~~~
 
 # Misc
@@ -39,6 +38,6 @@ git init
 gh repo create $prefix --public
 git remote add origin https://github.com/cpinotossi/${prefix}.git
 git add *
-git commit -m"add logging framework pino"
+git commit -m"change default http port to 3000 to avoid conflict with az app service default port"
 git push origin main
 ~~~
