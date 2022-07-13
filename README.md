@@ -38,5 +38,7 @@ git config --global init.defaultBranch main
 git init
 gh repo create $prefix --public
 git remote add origin https://github.com/cpinotossi/${prefix}.git
+git add *
+git commit -m"add logging framework pino"
 git push origin main
 ~~~
