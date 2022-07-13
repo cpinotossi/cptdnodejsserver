@@ -8,7 +8,7 @@ require('dotenv').config();
 const logger = require('./logger');
 
 const portHttp = process.env.PORTHTTP;
-const portSSL = process.env.PORTSSL;
+const portSSL = process.env.PORT || process.env.PORTSSL;
 const color = process.env.SCOLOR;
 const iipSSL = (process.env.INTERFACEIPSSL)?process.env.INTERFACEIPSSL:'0.0.0.0';
 const iip = (process.env.INTERFACEIP)?process.env.INTERFACEIP:'0.0.0.0';
