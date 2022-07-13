@@ -12,8 +12,8 @@ Install and run.
 ~~~ bash
 npm install
 npm run start
-curl -v http://localhost:3000
-curl -v -k https://localhost:4040
+curl -v -k https://localhost:8080
+curl -v http://localhost:8080
 ~~~
 
 
@@ -38,6 +38,6 @@ git init
 gh repo create $prefix --public
 git remote add origin https://github.com/cpinotossi/${prefix}.git
 git add *
-git commit -m"change default http port to 3000 to avoid conflict with az app service default port"
+git commit -m"need to change the server to only support http or https"
 git push origin main
 ~~~
